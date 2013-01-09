@@ -1,25 +1,35 @@
 #include <stdio.h>
-#include <stdafx.h>
 #include <iostream>
 #include <fstream>
 #include <stdlib.h>
 #include <dirent.h>
+using namespace std;
+
+int main() {
 
 
-int main(int argc, char* argv[]) {
-	int name, dir, dur;
-	printf ("please enter a name for this slideshow");
-	scanf ("%d", &name);
-	printf ("please enter the directory the pictures are in");
-	scanf ("%d", &dir);
-	printf ("please enter a slide duration")
-	scanf ("%d", &dur);
-DIR * opendir (const char *dir);
+	string name, dir, dur;
+
+	
+	cout << "please enter a name for this slideshow: " << std::endl;
+	cin >> name;
+	cout << "please enter the directory the pictures are located in: " << std::endl;
+	cin >> dir;
+	cout << "please enter the slide duration: " << std::endl;
+	cin >> dur;
+
+  ofstream outputFile;
+outputFile.open("slideshow.txt");
+
+outputFile << name << endl;
+outputFile << dir << endl;
+outputFile << dur << endl;
+//the program outputs the variables entered to make sure they are correct
+
+outputFile.close();
+cout << "Done!\n";
 
 return 0;
-	
+}
 
 
-
-
-ofstream outputFile(name+".xml");
