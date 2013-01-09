@@ -18,14 +18,35 @@ int main() {
 	cout << "please enter the slide duration: " << std::endl;
 	cin >> dur;
 
-  ofstream outputFile;
-outputFile.open("slideshow.txt");
+const string file = name + ".txt";
 
-outputFile << name << endl;
-outputFile << dir << endl;
-outputFile << dur << endl;
-//the program outputs the variables entered to make sure they are correct
+ofstream outputFile;
+outputFile.open(file.c_str(),ios::in | ios::binary);
+outputFile << "<background>" << endl; 
+outputFile << "<starttime>" << endl;  
+outputFile << "<year>2000</year>" << endl;    
+outputFile << "<month>01</month>" << endl;    
+outputFile << "<day>01</day>" << endl;    
+outputFile << "<hour>00</hour>" << endl;    
+outputFile << "<minute>01</minute>" << endl;   
+outputFile << "<second>00</second>" << endl;   
+outputFile << "</starttime>" << endl; 
+outputFile << "<static>" << endl;
+outputFile << "<duration>" << dur << "</duration>" << endl;
+outputFile << "</static>" << endl;
+//<static>
+//    <duration></duration>
+//    <file></file>
+// </static>
 
+ //below sections must be repeated for each slide!
+outputFile << "<transition>" << endl; 
+outputFile << "<duration>02</duration>" << endl;
+outputFile << "<from></from>" << endl;
+outputFile << "<to></to>" << endl;
+outputFile << "</transition>" << endl;
+outputFile << "</background>" << endl;
+outputFile << file <<endl;
 outputFile.close();
 cout << "Done!\n";
 
