@@ -21,7 +21,7 @@ int main() {
 const string file = name + ".txt";
 
 ofstream outputFile;
-outputFile.open(file.c_str(),ios::in | ios::binary);
+outputFile.open(file.c_str());
 outputFile << "<background>" << endl; 
 outputFile << "<starttime>" << endl;  
 outputFile << "<year>2000</year>" << endl;    
