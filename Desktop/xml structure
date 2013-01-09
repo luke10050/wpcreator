@@ -1,0 +1,19 @@
+<background>
+  <starttime>
+    <year></year>
+    <month></month>
+    <day></day>
+    <hour></hour>
+    <minute></minute>
+    <second></second>
+  </starttime>
+  <static>
+    <duration></duration>
+    <file></file>
+  </static>
+  <transition>
+    <duration></duration>
+    <from></from>
+    <to></to>
+  </transition>
+</background>
