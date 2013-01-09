@@ -34,19 +34,22 @@ outputFile << "</starttime>" << endl;
 outputFile << "<static>" << endl;
 outputFile << "<duration>" << dur << "</duration>" << endl;
 outputFile << "</static>" << endl;
-//<static>
-//    <duration></duration>
-//    <file></file>
-// </static>
 
- //below sections must be repeated for each slide!
+//below sections must be repeated for each slide!
+
+outputFile << "<static>" << endl;
+outputFile << "<duration>" << dur << "</duration>: << endl;
+outputFile << "<file>" << "x" << "</file>" << endl;
+outputFile << "</static>"
+
+
 outputFile << "<transition>" << endl; 
 outputFile << "<duration>02</duration>" << endl;
 outputFile << "<from></from>" << endl;
 outputFile << "<to></to>" << endl;
 outputFile << "</transition>" << endl;
 outputFile << "</background>" << endl;
-outputFile << file <<endl;
+outputFile << file << endl;
 outputFile.close();
 cout << "Done!\n";
 
