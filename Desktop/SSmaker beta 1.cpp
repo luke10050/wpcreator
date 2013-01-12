@@ -13,7 +13,7 @@ int main() {
 	char *p;
 	int x, c, t, z; /* c stands for countdown */
 	x=2, c=1, z=0, t=2;
-	string name, dir, dur, HMS;
+	string name, dir, dur, un;
 	vector<string> filename;
 	string command;
 	cout << "please enter a name for this slideshow: " << endl;
@@ -24,6 +24,8 @@ int main() {
 	cin >> dur;
 	cout << "enter the number of files in the directory" << endl;
 	cin >> c;
+	cout << "please enter your Username" << endl;
+	cin >> un;
 
        DIR *dp;
        struct dirent *ep;
@@ -49,7 +51,7 @@ system("mkdir /home/tristan/SSmaker/");
 system("mkdir /home/tristan/SSmaker/Slideshows/");
 system("ln -s /home/tristan/SSmaker/Slideshows/ /usr/share/backgrounds/");
 
-const string file = "/home/tristan/SSmaker/Slideshows/" + name + ".xml";
+const string file = "/home/" + un + "/SSmaker/Slideshows/" + name + ".xml";
 ofstream outputFile;
 outputFile.open(file.c_str());
 outputFile << "<background>" << endl; 
