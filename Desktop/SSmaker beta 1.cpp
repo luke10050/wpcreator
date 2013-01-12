@@ -47,9 +47,9 @@ int main() {
 	}
 
 cout << "now creating required files and directories, for more information see man ***" << endl;
-system("mkdir /home/tristan/SSmaker/");
-system("mkdir /home/tristan/SSmaker/Slideshows/");
-system("ln -s /home/tristan/SSmaker/Slideshows/ /usr/share/backgrounds/");
+system("mkdir ~/SSmaker/");
+system("mkdir ~/SSmaker/Slideshows/");
+system("ln -s ~/SSmaker/Slideshows/ /usr/share/backgrounds/");
 
 const string file = "/home/" + un + "/SSmaker/Slideshows/" + name + ".xml";
 ofstream outputFile;
